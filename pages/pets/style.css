@@ -10,6 +10,14 @@ body {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
 .whole-page-wrapper {
   display: flex;
   flex-flow: column;
@@ -77,7 +85,7 @@ footer p {
   color: #f1cdb3;
 }
 
-footer address > div {
+footer address > a {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -111,10 +119,6 @@ footer address > div {
   margin-top: 32px;
   gap: 33px;
   margin-left: 40px;
-}
-
-body {
-  width: 100wv;
 }
 
 .main-wrapper {
@@ -155,7 +159,7 @@ p.subtitle {
   margin: 0;
 }
 
-.logo {
+.logo a {
   display: flex;
   flex-flow: column wrap;
 
@@ -181,6 +185,7 @@ main {
   justify-content: center;
 }
 
+h1,
 h2,
 h3,
 h4,
@@ -199,7 +204,8 @@ h2 {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-h3 {
+h3,
+h1 {
   font-size: 35px;
   line-height: 45px;
 
@@ -268,7 +274,7 @@ p.subtitle {
   margin: 0;
 }
 
-.logo {
+.logo a {
   display: flex;
   flex-flow: column wrap;
   gap: 10px;
@@ -289,9 +295,6 @@ header {
 nav a {
   text-decoration: none;
 
-  width: 60px;
-  height: 24px;
-
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -301,19 +304,19 @@ nav a {
   color: #545454;
 }
 
-header ul {
-  margin-top: 13px;
-  display: flex;
-}
-
 li {
   list-style: none;
 }
 
 header ul {
   display: flex;
-  gap: 36px;
-  justify-content: space-between;
+  gap: 36.7px;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 11px;
+  display: flex;
+  padding: 0;
 }
 main section {
   display: flex;
@@ -321,7 +324,8 @@ main section {
   align-items: center;
 }
 
-main section h3 {
+main section h3,
+main section h1 {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -439,6 +443,18 @@ figcaption p {
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
+  transition: all;
+  transition-duration: 400ms;
+}
+
+.pagination button:nth-child(4):hover,
+.pagination button:last-child:hover {
+  background-color: #f1cdb3;
+}
+
+.pagination button:nth-child(4):active,
+.pagination button:last-child:active {
+  transform: translateY(2px);
 }
 
 .pagination div {
@@ -456,4 +472,80 @@ figcaption p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+figure {
+  transition: all;
+  transition-duration: 400ms;
+}
+
+figure:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+figure button {
+  transition: all;
+  transition-duration: 400ms;
+}
+
+figure button:hover {
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
+}
+
+figure button:active {
+  transform: translateY(2px);
+}
+
+address a {
+  transition: all;
+  transition-duration: 300ms;
+
+  color: #f1cdb3;
+}
+
+address a:hover {
+  scale: 105%;
+  text-decoration: underline #f1cdb3;
+}
+
+nav a {
+  transition: all;
+  transition-duration: 300ms;
+}
+
+nav li:hover a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+
+  color: #292929;
+}
+
+nav div {
+  transition: all;
+  transition-duration: 400ms;
+  background: #f1cdb3;
+  height: 3px;
+  opacity: 0;
+}
+
+nav li:hover div {
+  opacity: 1;
+}
+
+nav li:nth-child(2) div {
+  opacity: 1;
+}
+
+.logo a {
+  transition: all;
+  transition-duration: 400ms;
+}
+
+.logo a:hover {
+  scale: 105%;
 }

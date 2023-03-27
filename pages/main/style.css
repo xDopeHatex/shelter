@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   width: 100%;
   padding: 0;
@@ -43,12 +51,17 @@ body {
   background-color: #fddcc4;
 }
 
-.first-screen :where(h2, h3, h4) {
+.first-screen button:active {
+  transform: translateY(2px);
+}
+
+.first-screen :where(h1, h3, h4) {
   font-style: normal;
   font-weight: 400;
   color: #ffffff;
 }
 
+h1,
 h2,
 h3,
 h4,
@@ -60,7 +73,8 @@ h5 {
   margin: 0;
 }
 
-h2 {
+h2,
+h1 {
   font-size: 44px;
   line-height: 57px;
 
@@ -181,6 +195,26 @@ header {
   justify-content: space-between;
 }
 
+.not-only h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+
+  color: #ffffff;
+}
+
+.not-only .p-large {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+
+  color: #cdcdcd;
+}
+
 nav a {
   text-decoration: none;
 
@@ -225,11 +259,19 @@ header ul {
   margin: 0;
 }
 
-.logo {
+.logo a {
   display: flex;
   flex-flow: column wrap;
   gap: 10px;
   align-items: center;
+}
+
+.our-friends form button:hover {
+  background: #fddcc4;
+}
+
+.our-friends form button:active {
+  transform: translateY(2px);
 }
 
 nav a {
@@ -275,7 +317,7 @@ nav li:nth-child(1) div {
   height: 72px;
 }
 
-.wrapper-first-screen h2 {
+.wrapper-first-screen h1 {
   width: 310px;
   height: 114px;
 }
@@ -290,7 +332,7 @@ nav li:nth-child(1) div {
   margin-bottom: -12px;
 }
 
-.wrapper-first-screen h2 {
+.wrapper-first-screen h1 {
   margin: 0;
   padding: 0;
 }
@@ -352,7 +394,11 @@ nav li:nth-child(1) div {
   border: 2px solid #fddcc4;
 }
 
-.third-screen section > button {
+.third-screen div button:active {
+  transform: translateY(2px);
+}
+
+.third-screen section form > button {
   background-color: #f1cdb3;
   border-radius: 100px;
   width: 261px;
@@ -530,6 +576,12 @@ figcaption p {
   gap: 31px;
   align-items: center;
 }
+
+.wrapper-fifth-screen img {
+  margin-top: 5px;
+  margin-left: 1px;
+}
+
 .fifth-screen {
   padding-top: 81.5px;
 }
@@ -538,7 +590,7 @@ figcaption p {
   display: flex;
   flex-flow: column nowrap;
 
-  gap: 19px;
+  gap: 19.3px;
 }
 
 .card {
@@ -550,6 +602,10 @@ figcaption p {
   border-radius: 9px;
   width: 349px;
   height: 43px;
+}
+
+.card img {
+  margin-top: 0px;
 }
 
 .sixth-screen {
@@ -601,7 +657,7 @@ footer p {
   color: #f1cdb3;
 }
 
-footer address > div {
+footer address > a {
   display: flex;
   gap: 20px;
 
@@ -635,10 +691,6 @@ footer address > div {
   display: flex;
   flex-flow: column wrap;
   gap: 32px;
-}
-
-body {
-  width: 100wv;
 }
 
 .main-wrapper {
@@ -685,4 +737,16 @@ p.subtitle {
 
   align-items: center;
   justify-content: center;
+}
+
+address a {
+  transition: all;
+  transition-duration: 300ms;
+
+  color: #f1cdb3;
+}
+
+address a:hover {
+  scale: 105%;
+  text-decoration: underline #f1cdb3;
 }
