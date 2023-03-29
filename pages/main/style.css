@@ -270,6 +270,11 @@ header ul {
   background: #fddcc4;
 }
 
+.pets figure:hover button {
+  background: #fddcc4;
+  border: #fddcc4;
+}
+
 .our-friends form button:active {
   transform: translateY(2px);
 }
@@ -542,6 +547,15 @@ figcaption p {
   width: 1280px;
   height: 462px;
   background: #f6f6f6;
+}
+
+.card {
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.card:hover {
+  background-color: #fddcc4;
 }
 
 .card-p {

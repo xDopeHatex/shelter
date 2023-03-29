@@ -487,9 +487,10 @@ figure:hover {
 figure button {
   transition: all;
   transition-duration: 400ms;
+  cursor: pointer;
 }
 
-figure button:hover {
+figure:hover button {
   background-color: #fddcc4;
   border: 2px solid #fddcc4;
 }
