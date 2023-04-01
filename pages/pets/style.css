@@ -34,17 +34,17 @@ a {
   } */
 
 .wrapper-sixth-screen {
-  width: 1280px;
+  max-width: 1280px;
   height: 350px;
 }
 
 main section {
-  width: 1280px;
+  max-width: 1280px;
   height: 1342px;
 }
 
 .wrapper-first-screen {
-  width: 1280px;
+  max-width: 1280px;
   height: 350px;
 }
 footer > img {
@@ -283,7 +283,7 @@ p.subtitle {
 }
 
 header {
-  width: 1280px;
+  max-width: 1280px;
   height: 120px;
   display: flex;
   flex-flow: row wrap;
@@ -342,7 +342,7 @@ main section h1 {
 }
 
 section ul {
-  width: 1280px;
+  max-width: 1280px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 40px;
