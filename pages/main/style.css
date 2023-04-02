@@ -243,6 +243,56 @@ header ul {
   padding-top: 90px;
 }
 
+nav li:hover a {
+  color: #fafafa;
+}
+
+nav li:nth-child(1) a {
+  color: #fafafa;
+}
+
+nav div {
+  transition: all;
+  transition-duration: 400ms;
+  background: #f1cdb3;
+  height: 3px;
+  opacity: 0;
+}
+
+nav li:hover div {
+  opacity: 1;
+}
+
+nav li:nth-child(1) div {
+  opacity: 1;
+}
+
+.not-only {
+  display: flex;
+  justify-content: space-between;
+}
+
+.not-only img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  float: bottom;
+}
+
+nav a {
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+
+  color: #cdcdcd;
+  transition: all;
+  transition-duration: 300ms;
+}
+
 @media (max-width: 860px) {
   .first-screen {
     padding: 30px 30px 0;
@@ -351,18 +401,6 @@ header ul {
   }
 }
 
-.second-whole-width {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-}
-
-.third-whole-width {
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
-}
-
 .fourth-whole-width {
   background-color: #ffffff;
   display: flex;
@@ -395,87 +433,167 @@ header ul {
   transform: translateY(2px);
 }
 
-nav a {
-  text-decoration: none;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-
-  color: #cdcdcd;
-  transition: all;
-  transition-duration: 300ms;
-}
-
-nav li:hover a {
-  color: #fafafa;
-}
-
-nav li:nth-child(1) a {
-  color: #fafafa;
-}
-
-nav div {
-  transition: all;
-  transition-duration: 400ms;
-  background: #f1cdb3;
-  height: 3px;
-  opacity: 0;
-}
-
-nav li:hover div {
-  opacity: 1;
-}
-
-nav li:nth-child(1) div {
-  opacity: 1;
-}
-
-.not-only {
-  display: flex;
-  justify-content: space-between;
-}
-
-.not-only img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  float: bottom;
-}
+/*  SECOND SCREEN  */
 
 .second-screen {
-  padding-top: 80px;
-  height: 588px;
-  width: 1280px;
+  padding: 80px 20px 97px;
+
+  max-width: 1280px;
+  margin: auto;
 }
 
-.second-screen section {
+.about {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 112px;
+  gap: 10%;
 }
 
-.second-screen section div:nth-child(2) {
-  height: 380px;
-  width: 430px;
+.about div:nth-child(2) {
+  max-width: 430px;
   display: flex;
   flex-flow: column wrap;
   gap: 25px;
 }
 
-.second-screen section div:nth-child(1) {
-  height: 408px;
-  width: 308px;
+.about div:nth-child(1) {
+  max-width: 308px;
 }
 
+@media (max-width: 768px) {
+  .about {
+    flex-flow: column-reverse;
+    gap: 80px;
+    padding-bottom: 17px;
+  }
+  .second-screen {
+    padding: 80px 20px 80px;
+
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .about div:nth-child(1) {
+    padding: 0px 20px;
+
+    height: auto;
+    width: auto;
+  }
+
+  .about div:nth-child(1) img {
+    height: auto;
+    max-width: 260px;
+    object-fit: contain;
+  }
+
+  .about {
+    flex-flow: column-reverse;
+    gap: 40px;
+    padding-bottom: 17px;
+  }
+
+  .second-screen {
+    max-width: 320px;
+    padding: 43px 20px 20px;
+  }
+
+  .about h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    color: #545454;
+    text-align: center;
+  }
+
+  .about .p-large {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 0px 5px;
+    text-align: justify;
+
+    color: #4c4c4c;
+  }
+}
+
+/*  THIRD SCREEN  */
+
 .wrapper-third-screen {
-  height: 877px;
-  width: 1280px;
   background: #f6f6f6;
 }
+
+.third-screen {
+  margin: auto;
+  max-width: 1280px;
+  padding: 80px 36px 99px;
+}
+
+.our-friends {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 59px;
+}
+
+.our-friends > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  gap: 4.8%;
+}
+
+.pets {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+figcaption p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #545454;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.pets figure {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: center;
+  align-items: center;
+  gap: 26px;
+  transition: all;
+  transition-duration: 300ms;
+  background-color: #fafafa;
+  margin: 0;
+}
+
+.pets figcaption {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 27px;
+}
+
+.third-screen h3 {
+  max-width: 400px;
+  text-align: center;
+}
+
+/*  THIRD SCREEN BUTTON & HOVER  */
 
 .third-screen div button {
   background-color: transparent;
@@ -527,65 +645,6 @@ nav li:nth-child(1) div {
   background-color: #fddcc4;
 }
 
-.third-screen section {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 43px;
-}
-
-.third-screen section > div {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-items: center;
-  align-items: center;
-  gap: 13px;
-}
-
-.pets {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 10px;
-}
-
-figcaption p {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  color: #545454;
-  text-align: center;
-  letter-spacing: 0.06em;
-}
-
-.pets figure {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-items: center;
-  align-items: center;
-  gap: 26px;
-  transition: all;
-  transition-duration: 300ms;
-  background-color: #fafafa;
-}
-
-.pets figcaption {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 27px;
-}
-
-.pets figcaption button {
-  margin-bottom: 36px;
-}
-
-.pets figure:hover {
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-}
-
 .pets figcaption > button {
   width: 187px;
   height: 52px;
@@ -602,11 +661,136 @@ figcaption p {
   letter-spacing: 0.06em;
 }
 
-.third-screen h3 {
-  width: 400px;
-  text-align: center;
-  margin-top: 80px;
+.pets figcaption button {
+  margin-bottom: 36px;
 }
+
+.pets figure:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.our-friends > .hidden-btns {
+  display: none;
+}
+
+@media (max-width: 1110px) {
+  .third-screen {
+    margin: auto;
+    max-width: 1280px;
+    padding: 80px 31px 99px;
+  }
+
+  .pets figure:nth-child(3) {
+    display: none;
+  }
+  .our-friends > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    gap: 12px;
+  }
+
+  .our-friends > div > div {
+    flex-basis: 65%;
+    flex-grow: 0;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .third-screen {
+    margin: auto;
+    max-width: 1280px;
+    padding: 42px 10px;
+  }
+
+  .pets figure:nth-child(2) {
+    display: none;
+  }
+  .our-friends > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    gap: 12px;
+  }
+
+  .our-friends > div > div {
+    flex-basis: auto;
+    flex-grow: 0;
+    gap: 0;
+  }
+
+  .our-friends > h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+
+    letter-spacing: 0.06em;
+
+    color: #545454;
+  }
+}
+
+@media (max-width: 424px) {
+  .our-friends {
+    gap: 36px;
+  }
+
+  .our-friends > div button {
+    display: none;
+  }
+
+  .our-friends > div > div > figure button {
+    display: block;
+  }
+
+  .our-friends > div {
+    justify-content: center;
+  }
+
+  .our-friends > .hidden-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+  }
+
+  .our-friends > .hidden-btns > button {
+    display: block;
+    background-color: transparent;
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+
+    border: 2px solid #f1cdb3;
+
+    cursor: pointer;
+
+    transition: all;
+    transition-duration: 300ms;
+    margin-top: -17px;
+  }
+
+  .hidden-btns button:hover {
+    background-color: #fddcc4;
+    border: 2px solid #fddcc4;
+  }
+
+  .hidden-btns button:active {
+    transform: translateY(2px);
+  }
+}
+
+/* FOURTH SCREEN */
 
 .wrapper-fourth-screen {
   height: 611px;
