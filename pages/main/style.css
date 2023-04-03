@@ -401,18 +401,6 @@ nav a {
   }
 }
 
-.fourth-whole-width {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-}
-
-.fifth-whole-width {
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
-}
-
 .sixth-whole-width {
   display: flex;
   justify-content: center;
@@ -742,7 +730,7 @@ figcaption p {
 
 @media (max-width: 424px) {
   .our-friends {
-    gap: 36px;
+    gap: 40px;
   }
 
   .our-friends > div button {
@@ -793,14 +781,33 @@ figcaption p {
 /* FOURTH SCREEN */
 
 .wrapper-fourth-screen {
-  height: 611px;
-  width: 1280px;
+  max-width: 1280px;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 80px 55px 85px;
 }
 
 .wrapper-fourth-screen h3 {
   text-align: center;
   margin-bottom: 60px;
-  margin-top: 80px;
+}
+
+.wrapper-fourth-screen ul {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 119.5px;
+  justify-content: center;
+  row-gap: 55px;
+
+  padding: 0 50px 0 50px;
+}
+.wrapper-fourth-screen li h4 {
+  text-align: center;
+}
+
+.wrapper-fourth-screen img {
+  height: 60px;
+  width: 60px;
 }
 
 .wrapper-fourth-screen ul {
@@ -820,15 +827,124 @@ figcaption p {
   gap: 30px;
 }
 
-.wrapper-fourth-screen img {
-  height: 60px;
-  width: 60px;
+@media (max-width: 1250px) {
+  .wrapper-fourth-screen ul {
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: center;
+    row-gap: 55px;
+    column-gap: 5%;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrapper-fourth-screen li {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    flex-basis: 15%;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper-fourth-screen {
+    max-width: 1280px;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 80px 55px 100px;
+  }
+
+  .wrapper-fourth-screen ul {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrapper-fourth-screen li {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
+@media (max-width: 530px) {
+  .wrapper-fourth-screen {
+    max-width: 1280px;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 42px 10px 42px;
+  }
+
+  .wrapper-fourth-screen h3 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+
+    letter-spacing: 0.06em;
+
+    color: #545454;
+    margin-bottom: 37px;
+  }
+
+  .wrapper-fourth-screen h4 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+
+    letter-spacing: 0.06em;
+
+    color: #545454;
+  }
+
+  .wrapper-fourth-screen ul {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrapper-fourth-screen li {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+
+    margin: 0;
+  }
+
+  .wrapper-fourth-screen li img {
+    width: 50px;
+  }
+}
+
+/* FIFTH SCREEN */
+
 .wrapper-fifth-screen {
-  width: 1280px;
-  height: 462px;
   background: #f6f6f6;
+}
+
+.fifth-screen {
+  max-width: 1280px;
+  margin: auto;
+  padding: 80px 30px 101px;
 }
 
 .card {
@@ -858,7 +974,7 @@ figcaption p {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  width: 380px;
+  max-width: 380px;
   height: 72px;
   text-align: left;
 
@@ -878,15 +994,21 @@ figcaption p {
   margin-left: 1px;
 }
 
-.fifth-screen {
-  padding-top: 81.5px;
-}
-
 .wrapper-fifth-screen section div:nth-child(2) {
   display: flex;
   flex-flow: column nowrap;
 
   gap: 19.3px;
+}
+
+.wrapper-fifth-screen section > div:nth-child(1) {
+  width: auto;
+}
+
+.wrapper-fifth-screen section > div:nth-child(1) img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card {
@@ -896,7 +1018,7 @@ figcaption p {
   align-items: center;
   background-color: #f1cdb3;
   border-radius: 9px;
-  width: 349px;
+  max-width: 349px;
   height: 43px;
 }
 
@@ -904,14 +1026,125 @@ figcaption p {
   margin-top: 0px;
 }
 
+/* FIFTH SCREEN BUTTONS & HOVER*/
+
+.card {
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.card:hover {
+  background-color: #fddcc4;
+}
+
+@media (max-width: 935px) {
+  .fifth-screen {
+    padding: 82px 30px 85px;
+  }
+
+  .wrapper-fifth-screen {
+    max-width: 1280px;
+
+    background: #f6f6f6;
+    margin: auto;
+  }
+
+  .fifth-screen section {
+    flex-flow: column-reverse;
+    gap: 56px;
+    padding: 0px 0px 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .fifth-screen {
+    padding: 44px 20px 28px;
+  }
+
+  .wrapper-fifth-screen h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding: 0;
+    margin: 0;
+    color: #545454;
+  }
+
+  .wrapper-fifth-screen h5 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+
+    color: #545454;
+    letter-spacing: 0em;
+    padding: 0 2px;
+  }
+
+  .card > p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+
+    letter-spacing: 0.06em;
+
+    color: #545454;
+  }
+
+  div > .legal {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: justify;
+
+    color: #b2b2b2;
+  }
+
+  .card > img {
+    width: 30px;
+  }
+
+  .wrapper-fifth-screen section > div:nth-child(1) {
+    width: auto;
+    padding: 0 10px;
+  }
+
+  .wrapper-fifth-screen section > div:nth-child(1) img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .wrapper-fifth-screen {
+    max-width: 1280px;
+
+    background: #f6f6f6;
+    margin: auto;
+  }
+
+  .fifth-screen section {
+    flex-flow: column-reverse;
+    gap: 56px;
+    padding: 0px 0px 15px;
+  }
+}
+
+/* SIXTH SCREEN */
+
 .sixth-screen {
   display: flex;
 
   gap: 137px;
 }
-
-/* .wrapper-sixth-screen {
-} */
 
 .wrapper-sixth-screen {
   width: 1280px;
